@@ -1,0 +1,204 @@
+:root {
+  --cor-primaria: #1da1f2;
+  --cor-primaria-hover: #137abd;
+  --cor-secundaria: #14171a;
+  --cor-texto-principal: #fff;
+  --cor-texto-secundario: #8899a6;
+  --cor-fundo: #000;
+  --borda-raio: 8px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(../img/imagem-ti.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+header {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28.8px;
+  color: var(--cor-primaria);
+}
+
+header nav {
+  margin-top: 16px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  font-size: 17.6px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--cor-primaria);
+}
+
+
+.servicos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+}
+
+.servicos button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-principal);
+  padding: 12px 24px;
+  border: 2px solid var(--cor-primaria);
+  border-radius: var(--borda-raio);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.servicos button:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: scale(1.05);
+}
+
+.servicos button span {
+  display: block;
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+section {
+  background-color: var(--cor-secundaria);
+  padding: 32px;
+  border-radius: var(--borda-raio);
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+section h2 {
+  margin: 0 0 16px 0;
+  font-size: 32px;
+  color: var(--cor-primaria);
+}
+
+section p {
+  font-size: 17.6px;
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--cor-primaria);
+  border-radius: var(--borda-raio);
+  background-color: #0f1417;
+  color: var(--cor-texto-principal);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-principal);
+  padding: 12px 32px;
+  border: none;
+  border-radius: var(--borda-raio);
+  cursor: pointer;
+  font-size: 17.6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 14.08px;
+  color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 768px) {
+  .servicos {
+      flex-direction: column;
+      align-items: center;
+  }
+  section {
+      width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 25.6px;
+  }
+   header nav ul li a{
+      font-size: 16px;
+  }
+  section h2 {
+      font-size: 24px;
+  }
+  section p {
+      font-size: 16px;
+  }
+  form {
+      width: 100%;
+  }
+}
